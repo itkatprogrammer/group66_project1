@@ -1,0 +1,594 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import "variables";
+@import "mixins";
+@import url(template_top-line.css);
+@import url(template_header.css);
+@import url(template_footer.css);
+$textColor: #141414;
+$firstBackColor: #FFF;
+
+
+/*основная часть - карточка с фото*/
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 120px 360px;
+    max-width: 1920px;
+    gap: 120px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $firstBackColor;
+
+    @media screen and (min-width: 1449px) {
+        #main_photo_adaptive {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1449px) {
+        max-width: 1400px;
+        padding-left: 220px;
+        padding-right: 220px;
+        padding-top: 128px;
+        padding-bottom: 108px;
+        align-items: center;
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+
+            #main_photo {
+                float: left;
+                height: 400px;
+                width: auto;
+            }
+
+            #main_photo_adaptive {
+                display: none;
+            }
+
+            #main_photo_exclude {
+                float: right;
+                height: 400px;
+                width: auto;
+            }
+
+        }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 991px) {
+        padding-left: 115px;
+        padding-right: 150px;
+        padding-top: 100px;
+        padding-bottom: 90px;
+        align-items: center;
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+
+            #main_photo {
+                float: left;
+                height: 300px;
+                width: auto;
+            }
+
+            #main_photo_adaptive {
+                display: none;
+            }
+
+            #main_photo_exclude {
+                float: right;
+                height: 300px;
+                width: auto;
+            }
+
+            .contact-card__info {
+                display: flex;
+                width: auto;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                flex-shrink: 0;
+
+                .contact-card__h3 {
+                    color: #5C8692;
+                    font-family: $mainFont;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 154.5%;
+                    letter-spacing: 1.5px;
+                }
+
+                .contact-card__h1 {
+                    color: #141414;
+                    font-family: $secondaryFont;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 130%;
+                    letter-spacing: -0.45px;
+                }
+            }
+
+            /*иконки с контактами*/
+            .contact-card__contacts {
+
+                .contact_text {
+                    color: $textColor;
+                    font-family: $mainFont;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 125%;
+                    letter-spacing: 0.96px;
+                    text-transform: uppercase;
+                }
+
+                .contact_title {
+                    color: $textColor;
+                    font-family: $secondaryFont;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 125%;
+                    gap: 5px;
+                }
+
+                .icon {
+                    height: 55px;
+                    width: 55px;
+                    padding: 0px 15px 0px 0px;
+                }
+
+                .contact-card__container {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+            }
+
+            .btn_green-secondary_uppercase {
+                @include btn(#7A9CA5, 13px 26px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $btnTextLight;
+                text-align: center;
+                font-family: $mainFont;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 125%;
+                letter-spacing: 1.4px;
+                text-transform: uppercase;
+                gap: 5px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 40px 80px;
+        align-items: center;
+
+        .contact-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            #main_photo {
+                float: inline-start;
+                height: 350px;
+                width: auto;
+            }
+
+            #main_photo_exclude {
+                display: none;
+            }
+
+            .contact-card__info {
+                display: flex;
+                flex-direction: column;
+                max-width: 80%;
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+
+            .contact-card__contacts {
+                .contact_text {
+                    font-size: 1.5vh;
+                }
+
+                .contact_title {
+                    font-size: 3vh;
+                }
+
+                .icon {
+                    height: 65px;
+                    width: 65px;
+                    padding: 0px 20px 0px 0px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 40px 80px;
+        align-items: center;
+
+        .contact-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            #main_photo {
+                float: inline-start;
+                height: 350px;
+                width: auto;
+            }
+
+            #main_photo_exclude {
+                display: none;
+            }
+
+            .contact-card__info {
+                display: flex;
+                flex-direction: column;
+                max-width: 80%;
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+
+            .contact-card__contacts {
+                .contact_text {
+                    font-size: 1.5vh;
+                }
+
+                .contact_title {
+                    font-size: 3vh;
+                }
+
+                .icon {
+                    height: 65px;
+                    width: 65px;
+                    padding: 0px 20px 0px 0px;
+                }
+            }
+        }
+    }
+
+
+    .contact-card {
+        display: flex;
+        align-items: center;
+        gap: 129px;
+
+        @media screen and (max-width: 480px) {
+            gap: 10px;
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            gap: 10px;
+        }
+
+        @media screen and (min-width: 769px) and (max-width: 991px) {
+            gap: 60px;
+        }
+    }
+
+    #main_photo {
+        float: left;
+        width: 646px;
+        height: 681px;
+    }
+
+    #main_photo_adaptive {
+        float: inline-start;
+        height: 350px;
+        width: auto;
+    }
+
+    #main_photo_exclude {
+        float: right;
+        width: 646px;
+        height: 681px;
+    }
+}
+
+
+
+/*основной текст карточки*/
+.contact-card__info {
+    display: flex;
+    width: 425px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    flex-shrink: 0;
+
+    .contact-card__h3 {
+        @extend %title_sm-top;
+        text-transform: uppercase;
+        padding-bottom: 9px;
+    }
+
+    .contact-card__h1 {
+        @include title_h2 (435px);
+    }
+}
+
+/*иконки с контактами*/
+.contact-card__contacts {
+
+    .contact_text {
+        color: $textColor;
+        font-family: $mainFont;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%;
+        letter-spacing: 0.96px;
+        text-transform: uppercase;
+    }
+
+    .contact_title {
+        color: $textColor;
+        font-family: $secondaryFont;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        gap: 25px;
+    }
+
+    .icon {
+        height: 75px;
+        width: 75px;
+        padding: 0px 27px 0px 0px;
+    }
+
+    .contact-card__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.btn_green-secondary_uppercase {
+    @include btn(#7A9CA5, 23px 36px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $btnTextLight;
+    text-align: center;
+    font-family: $mainFont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 125%;
+    letter-spacing: 1.68px;
+    text-transform: uppercase;
+    gap: 10px;
+
+    @media screen and (max-width: 480px) {
+        @include btn(#7A9CA5, 13px 26px);
+        display: flex;
+        font-size: 2vh;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        gap: 10px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        @include btn(#7A9CA5, 13px 26px);
+        display: flex;
+        font-size: 2vh;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        gap: 10px;
+    }
+}
+
+/*футер*/
+.footer {
+    display: flex;
+    justify-content: center;
+    max-height: 635px;
+    background-color: #1E2C30;
+    color: #FFFFFF;
+    padding-top: 66px;
+
+    @media (max-width: 480px) {
+        padding-top: 11px;
+        max-height: 2500px;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        padding-top: 16px;
+        max-height: 2500px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        padding-top: 16px;
+        max-height: 2500px;
+    }
+}
+
+
+.footer__container {
+    max-width: 1200px;
+}
+
+.container__logo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 52px;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+}
+
+
+.footer__logo {
+    @include text-styles ($secondaryFont, 40px, 700, 50px, 2%);
+
+    @media (max-width: 480px) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.footer__icons {
+    @media (max-width: 480px) {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+hr {
+    max-width: 1200px;
+    border-width: 1px;
+}
+
+.container__menu {
+    display: flex;
+    gap: 129px;
+    padding-top: 52px;
+    max-width: 1200px;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 50px;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 50px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1449px) {
+        gap: 95px;
+        margin-bottom: 60px;
+    }
+}
+
+.explore,
+.utility {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 480px) {
+        display: none;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        display: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        display: none;
+    }
+}
+
+.explore__title,
+.utility__title,
+.shedule__title,
+.contacts__title {
+    @include text-styles ($secondaryFont, 22px, 700, 30.8px, 0%);
+}
+
+.footer a {
+    @include text-styles ($mainFont, 17px, 500, 34px, -1%);
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.contacts__subtitle {
+    @include text-styles ($mainFont, 17px, 700, 25.5px, -1%);
+}
+
+.contacts__data {
+    @include text-styles ($mainFont, 17px, 500, 25.5px, -1%);
+}
+
+.shedule {
+    @include text-styles ($mainFont, 17px, 500, 34px, -1%);
+}
+
+.contacts__container {
+    display: flex;
+    gap: 29px;
+}
+
+.copyright {
+    max-height: 75px;
+    text-align: center;
+    background-color: #111E22;
+    @include text-styles ($mainFont, 15px, 400, 30px, -1%);
+    color: #FFFFFF;
+}

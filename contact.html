@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+
+    <link rel='stylesheet' href='styles/normalize.css'>
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/template_footer.css">
+    <link rel="stylesheet" href="styles/template_top-line.css">
+    <link rel="stylesheet" href="styles/template_header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--навигация-->
+    <header class="top__line">
+        <div class="container_logo">
+            <div class="header_logo"><img src="img/icons/template_top-line_logo.svg" alt="logo" id="header_icons" />
+                <p>Beautyness</p>
+            </div>
+            <div class="header_call"><img src="img/icons/template_top-line_icon1.svg" alt="call icon"
+                    id="header_icons" />
+                <p>Call Us - (+22) 123 456 7890</p>
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <div class="nav-list">
+                <a href="index.html" class="menu_link">Home</a>
+
+                <div class="dropdown">
+                    <button class="menu_link" id="dropdown_menu_btn">Pages<img
+                            src="img/icons/template_top-line_chevron-down.svg" alt="dropdown_chevron"
+                            id="header_icons"></button>
+                    <div class="dropdown_list">
+                        <a href="team.html" class="menu_link">Team</a>
+                        <a href="blog.html" class="menu_link">Blog</a>
+                        <a href="locations.html" class="menu_link">Location</a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="menu_link">About</a>
+                <a href="services.html" class="menu_link">Services</a>
+                <a href="contact.html" class="menu_link">Contact</a>
+            </div>
+
+            <div class="container_smlinks">
+                <a href="https://www.facebook.com/" target="_blank"><img src="img/icons/FB_icon.svg" alt="Facebook"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="img/icons/TW_icon.svg" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/" target="_blank"><img src="img/icons/IN_icon.svg" alt="Link"></a>
+            </div>
+
+            <button class="btn_green-secondary_uppercase1"><img src="img/icons/template_top-line_icon2.svg"
+                    alt="reservation icon" id="header_icons"> RESERVATION</button>
+        </nav>
+    </header>
+    <!-- хедер: темный блок -->
+    <div class="header__content">
+        <div class="template-header-container">
+            <div class="header__content-small-text">GET IN TOUCH WITH US</div>
+            <div class="header__content-big-text">We Are Ready To Assist<br>You In 24x7</div>
+        </div>
+    </div>
+    <!--контакты и форма связи-->
+    <main class="contact-main">
+        <div class='contact-card'>
+            <img src="img/contact_location_photo bg.png" alt="photo" id="main_photo">
+            <div class="contact-card__info">
+                <div class="contact-card__title">
+                    <div class="contact-card__h3">GET IN TOUCH!</div>
+                    <div class="contact-card__h1">We are here to help you always...</div>
+                    <div class="contact-card__text">There are many variations of passages of Lorem Ipsum available,
+                        <br>but the majority have suffered alteration in some form,
+                        <br>buying to many desktop publishing packages.
+                    </div>
+                </div>
+                <div class="contact-card__contacts">
+                    <div class="contact-card__container">
+                        <img src="img/icons/adress_icon_green.svg" alt="adress" class="icon">
+                        <div class="contact-card_title">
+                            Visit Us :
+                            <p class="contact-card_text">NO.09a, Downtown, SAN DIEAGO, USA</p>
+                        </div>
+                    </div>
+                    <div class="contact-card__container">
+                        <img src="img/icons/email_icon_green.svg" alt="mail" class="icon">
+                        <div class="contact-card_title">
+                            Drop Us :
+                            <p class="contact-card_text">support@beautyness.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card__container">
+                        <img src="img/icons/call_icon_green.svg" alt="call" class="icon">
+                        <div class="contact-card_title">
+                            Call Us :
+                            <p class="contact-card_text">Call: 1-800-123-9999</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--форма заявки-->
+    <section class="container-appointment">
+        <div class="container__form">
+            <div class="container__form__title">
+                <div class="container__form__title__h3">SCHEDULE YOUR PRESENCE</div>
+                <div class="container__form__title__h1">Make an Appointment</div>
+                <div class="container__form__title__text">There are many variations of passages of Lorem Ipsum
+                    available,
+                    but the
+                    majority have suffered alteration in some form.</div>
+            </div>
+            <div class="container_input">
+                <input class="appointment__name" type="text" placeholder="Name">
+                <input class="appointment__mail" type="text" placeholder="Email">
+                <input class="appointment__phone" type="text" placeholder="Phone">
+                <input class="appointment__service" type="text" placeholder="Service You Need">
+                <input class="appointment__note" type="text" placeholder="Any Note For Us">
+                <button class="btn_green-secondary_uppercase">Make An Appointment</button>
+            </div>
+        </div>
+    </section>
+
+    <!--футер-->
+    <footer class="footer">
+        <div class='container-wrapper'>
+            <div class="footer__container">
+                <div class="container__logo">
+                    <div class="footer__logo"><img src="img/icons/template_top-line_logo.svg" alt="logo">Beautyness
+                    </div>
+                    <div class="footer__icons">
+                        <a href="https://www.facebook.com/" target="_blank"><img src="img/icons/footer-FB.svg"
+                                alt="Facebook"></a>
+                        <a href="https://twitter.com/" target="_blank"><img src="img/icons/footer-TW.svg"
+                                alt="Twitter"></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><img src="img/icons/footer-IN.svg"
+                                alt="Linkedin"></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="img/icons/footer-Inst.svg"
+                                alt="Instagram"></a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="container__menu">
+                    <div class="explore">
+                        <div class="explore__title">Explore</div>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="#">Appointments</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                    <div class="utility">
+                        <div class="utility__title">Utility Pages</div>
+                        <a href="#">Start here</a>
+                        <a href="#">Style guide</a>
+                        <a href="#">404 not found</a>
+                        <a href="#">Password protected</a>
+                        <a href="#">Licenses</a>
+                        <a href="#">Changelog</a>
+                    </div>
+                    <div class="contacts">
+                        <div class="contacts__title">Keep in Touch</div>
+                        <div class="contacts__container">
+                            <div class="contacts__subtitle">
+                                <p>Address : </p>
+                                <p>Mail : </p>
+                                <p>Phone : </p>
+                            </div>
+                            <div class="contacts__data">
+                                <p>24A Kingston St, Los Vegas NC 28202, USA.</p>
+                                <p>support@doctors.com</p>
+                                <p>(+22) 123 - 4567 - 900</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shedule">
+                        <div class="shedule__title">Working Hours</div>
+                        <p>Mon to Fri: 7am - 6pm</p>
+                        <p>Sat: 9am - 7pm</p>
+                        <p>Sun: 9am - 6pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">ⓒ Copyright 2021. Drafted by Victor Themes.</div>
+</body>
+
+</html>

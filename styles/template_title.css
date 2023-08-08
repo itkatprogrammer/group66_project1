@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title .title__small-up_uppercase {
+  color: #5C8692;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 154.5%;
+  letter-spacing: 1.5px;
+}
+
+.title .title__h2 {
+  color: #141414;
+  font-family: "Playfair Display", serif;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: -0.45px;
+}
+
+.title .title__small-down {
+  color: #555;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 165%;
+  padding-top: 1%;
+}
+
+.title .title__small-up_uppercase {
+  text-transform: uppercase;
+}
+.title .title__h2 {
+  max-width: 659px;
+}/*# sourceMappingURL=template_title.css.map */

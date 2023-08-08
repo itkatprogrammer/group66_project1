@@ -1,0 +1,1313 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import 'variables';
+@import 'mixins';
+
+body {
+
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/* начало стилей первого блока с карточками (Оксана) */
+
+.container__banner {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-direction: row;
+    max-width: 100%;
+    height: 925px;
+    flex-shrink: 0;
+    align-items: center;
+    background-color: #EBF3F5;
+    margin: 0 auto;
+    padding-left: 360px;
+    padding-right: 360px;
+
+    background-image: url("/img/bg/home_first-block\ bg.png");
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @media screen and (min-width: 992px) and (max-width: 1449px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%;
+        height: 600px;
+        padding: 70px;
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 100px;
+
+        background-image: url("/img/bg/home_first-block\ bg.png");
+        background-size: 50% 100%;
+
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        max-width: 100%;
+        height: auto;
+        padding: 70px;
+        background-image: none;
+        align-items: center;
+
+        .container__banner__info {
+            .container__banner__main {
+                display: flex;
+                flex-direction: column;
+                max-width: 300px;
+                align-items: flex-start;
+
+                .title__small-up_uppercase {
+                    font-size: 12px;
+                }
+
+                .title__h2 {
+                    font-size: 40px;
+                }
+
+                .title__small-down {
+                    display: flex;
+                    font-size: 14px;
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        text-align: center;
+        max-width: 100%;
+        height: auto;
+        padding: 60px;
+        background-image: none;
+        align-items: center;
+
+        .container__banner__info {
+            .container__banner__main {
+                display: flex;
+                flex-direction: column;
+                max-width: 300px;
+                align-items: center;
+
+                .title__small-up_uppercase {
+                    font-size: 15px;
+                }
+
+                .title__h2 {
+                    font-size: 60px;
+                }
+
+                .title__small-down {
+                    display: flex;
+                    font-size: 16px;
+                    width: 300px;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        text-align: center;
+        max-width: 100%;
+        height: auto;
+        padding: 50px;
+        background-image: none;
+        align-items: center;
+
+        .container__banner__info {
+            .container__banner__main {
+                display: flex;
+                flex-direction: column;
+                max-width: 300px;
+                align-items: center;
+
+                .title__small-up_uppercase {
+                    font-size: 15px;
+                }
+
+                .title__h2 {
+                    font-size: 60px;
+                }
+
+                .title__small-down {
+                    display: flex;
+                    font-size: 16px;
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+
+    .container__banner__info {
+        display: flex;
+        width: 510px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container__banner__main {
+        .title__small-up_uppercase {
+            @extend %title_sm-top;
+            text-transform: uppercase;
+        }
+
+        .title__h2 {
+            @include title_h2 (510px);
+            font-size: 70px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 115%;
+            letter-spacing: -0.7px;
+            gap: 24px;
+        }
+
+        .title__small-down {
+            @extend %title__sm-down; //стиль для нижнего текста
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 170%;
+            /* 32.3px */
+            display: flex;
+            width: 508px;
+            height: 62px;
+        }
+    }
+
+    .banner__button {
+        display: flex;
+        padding: 34px 0px;
+
+        .btn_green-secondary_uppercase-banner {
+            @include btn(#7A9CA5, 16px 33px);
+            color: $btnTextLight;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+    }
+
+    .container__banner__image {
+        display: flex;
+        max-width: auto;
+        height: auto;
+        padding-right: 25%;
+
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 767px) {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            padding: 0%;
+
+            #photo-girl {
+                display: flex;
+                max-width: 300px;
+                height: auto;
+
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1449px) {
+        display: flex;
+        max-width: auto;
+        height: auto;
+
+        #photo-girl {
+            display: flex;
+            max-width: 350px;
+            height: auto;
+
+        }
+    }
+
+    @media screen and (min-width: 1100px) and (max-width: 1200px) {
+        #photo-girl {
+            display: flex;
+            max-width: 350px;
+            height: auto;
+            padding-right: 15%;
+        }
+    }
+
+    @media screen and (min-width: 1201px) and (max-width: 1300px) {
+        #photo-girl {
+            display: flex;
+            max-width: 300px;
+            height: auto;
+            padding-right: 5%;
+        }
+    }
+}
+
+/* конец стилей первого блока с карточками (Оксана) */
+
+
+/* начало стилей второго блока с карточками (Саша) */
+.home-second-block__container {
+    display: flex;
+    padding: 144px 0px;
+    margin: 0px auto;
+    max-width: 1920px;
+    gap: 105px;
+}
+
+.home-second-block_card-image {
+    max-width: 100%;
+}
+
+.home-second-block__text-block .text-block__h1 {
+    color: #141414;
+    @include text-styles ($secondaryFont, 26px, 700, 120%, 0);
+    padding-top: 26px;
+    ;
+}
+
+.home-second-block__text-block .text-block__h2 {
+    color: #555;
+    @include text-styles ($mainFont, 18px, 400, 165%, 0.36px);
+    padding-top: 11px;
+    padding-bottom: 30px
+}
+
+.btn_transparent_uppercase {
+    @include btn(transparent, 18px 43px 18px 43px);
+    color: $btnTextDark;
+    text-transform: uppercase;
+    border: 2px solid #5C8692;
+    grid-column: 2;
+    width: 250px;
+    height: 65px;
+    justify-self: center;
+}
+
+@media (max-width: 480px) {
+    .home-second-block__container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .home-second-block__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (min-width:481px) and (max-width: 991px) {
+    .home-second-block__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 25px;
+    }
+
+    .home-second-block__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* конец стилей второго блока с карточками (Саша) */
+
+/* начало стилей третьего блока ABOUT US (Саша) */
+
+.home-about {
+    background: #EBF3F5;
+}
+
+.home-container {
+    display: flex;
+    max-width: 1200px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    gap: 125px;
+}
+
+.home-about .left-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 27px
+}
+
+.left-container__text-h2 {
+    @extend %title_sm-top;
+    text-transform: uppercase;
+}
+
+.left-container__text-h1 {
+    @extend %title_h2;
+    padding-top: 9px;
+}
+
+.left-container__text-description {
+    @include text-styles ($mainFont, 18px, 400, 165%, 0);
+    color: #555;
+    padding-top: 16px;
+}
+
+
+.left-container__cards {
+    display: flex;
+    gap: 10px;
+    padding-top: 35px;
+}
+
+.left-container__cards .card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1E2C30;
+    background: #FFF;
+    width: 165px;
+    padding: 17px 33px 19px 33px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.card__icon {}
+
+.card .card_text {
+    display: flex;
+    text-align: center;
+    @include text-styles ($secondaryFont, 22px, 700, 120%, 0);
+}
+
+.home-about .right-container {
+    position: relative;
+}
+
+.right-container__girl {
+    position: absolute;
+    top: 45px;
+    right: 38px;
+}
+
+.card__icon {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .home-about .right-container {
+        display: none;
+    }
+
+    .left-container__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-container__text {
+        text-align: center;
+    }
+}
+
+@media (min-width:481px) and (max-width: 991px) {
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0px auto;
+        gap: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        align-items: center;
+    }
+
+    .home-about .left-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left-container__text {
+        text-align: center;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1450px) {
+    .home-container {
+        margin: 0px auto;
+    }
+}
+
+/* конец стилей блока ABOUT US (Саша) */
+
+/* начало стилей блока OUR AWESOME BENEFITS (Саша) */
+
+.home-benefits-block__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px 105px;
+    margin: 0px auto;
+    max-width: 1920px;
+    padding-top: 144px;
+    padding-bottom: 161px;
+}
+
+.home-benefits-block-title {
+    display: grid;
+    grid-column: 1/4;
+    justify-content: center;
+    margin-bottom: 43px;
+}
+
+
+.home-benefits-block-title__h1 {
+    color: #5C8692;
+    text-align: center;
+    @include text-styles ($mainFont, 15px, 600, 154.5%, 1.5px);
+    text-transform: uppercase;
+}
+
+.home-benefits-block-title__h2 {
+    color: #141414;
+    text-align: center;
+    @include text-styles ($secondaryFont, 45px, 700, 130%, -0.45px);
+    padding-top: 9px;
+}
+
+.home-benefits-block__text-title {
+    color: #141414;
+    padding-top: 20px;
+    @include text-styles ($secondaryFont, 24px, 700, 120%, 0);
+}
+
+.home-benefits-block__text-description {
+    color: #555;
+    padding-top: 11px;
+    @include text-styles ($mainFont, 18px, 400, 165%, 0.36px);
+}
+
+
+@media (max-width: 480px) {
+    .home-benefits-block__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-benefits-block__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-benefits-block__icon {
+        max-width: 90px;
+        max-height: 90px;
+    }
+
+    .home-benefits-block__text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-benefits-block-title {
+        margin-bottom: 20px;
+    }
+}
+
+/* конец стилей блока OUR AWESOME BENEFITS (Саша) */
+
+/* начало стилей последнего блока (Саша) */
+
+.team-main__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 33px 45px;
+    margin: 0px auto;
+    max-width: 1920px;
+    padding-top: 129px;
+    padding-bottom: 151px;
+}
+
+.team-main .block-title {
+    display: grid;
+    grid-column: 1/4;
+    justify-content: center;
+}
+
+.team-main__container>a {
+    text-decoration: none;
+}
+
+.block-title__h2 {
+    color: #5C8692;
+    text-align: center;
+    @include text-styles ($mainFont, 15px, 600, 154.5%, 1.5px);
+    text-transform: uppercase;
+}
+
+.block-title__h1 {
+    color: #141414;
+    text-align: center;
+    @include text-styles ($secondaryFont, 45px, 700, 130%, -0.45px);
+    padding-top: 9px;
+}
+
+
+.blog-main__card.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-image {
+    max-width: 100%;
+}
+
+.blog-main__card .card-info {
+    padding: 30px 27px 30px 27px;
+    background: #EDF5F7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    height: 100%;
+}
+
+.card-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-author__date,
+.card-author__name {
+    color: #5C8692;
+    @include text-styles ($mainFont, 13px, 700, 125%, 0.78px);
+    text-transform: uppercase;
+}
+
+.card-author__delimiter {
+    width: 20px;
+    height: 2px;
+    background: #272D32;
+}
+
+.card-title {
+    color: #141414;
+    @include text-styles ($secondaryFont, 22px, 700, 140%, 0.44px);
+}
+
+.card-description {
+    color: #555;
+    @include text-styles ($mainFont, 18px, 400, 155%, 0.36px);
+}
+
+// Cтили для прозрачной кнопки 
+.btn_transparent_uppercase {
+    @include btn(transparent, 23px 36px 24px 36px);
+    color: $btnTextDark;
+    text-transform: uppercase;
+    border: 2px solid #5C8692;
+    grid-column: 2;
+    width: 250px;
+    height: 65px;
+    justify-self: center;
+}
+
+
+@media (max-width: 480px) {
+    .team-main__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width:481px) and (max-width: 991px) {
+    .team-main__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 70px;
+    }
+
+    .team-main .block-title {
+        display: grid;
+        grid-column: 1/3;
+    }
+
+    .btn_transparent_uppercase {
+        display: grid;
+        grid-column: 1/3;
+    }
+}
+
+@media (min-width: 1450px) {
+
+    .card-author__date,
+    .card-author__name {
+        font-size: 11px;
+    }
+}
+
+/* конец стилей последнего блока (Саша) */
+
+
+//Тут начинаются стили для контейнера с услугами и ценами (внесла Даша)
+
+.services {
+    max-width: 1920px;
+
+    @media (max-width: 480px) {
+        max-width: 480px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        max-width: 991px;
+    }
+}
+
+.services__subtitle {
+    @extend %title_sm-top;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 146px;
+}
+
+.services__title {
+    @extend %title_h2;
+    text-align: center;
+    padding-top: 9px;
+}
+
+.services__container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.services__container1 {
+    padding-top: 50px;
+    background-image: url('/img/services_background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: 480px) {
+        background-image: none;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        background-image: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        background-image: none;
+    }
+}
+
+.services__img {
+    @media (max-width: 480px) {
+        max-width: 300px;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        max-width: 380px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        max-width: 380px;
+    }
+}
+
+
+.service__name {
+    @include text-styles ($secondaryFont, 22px, 400, 28.6px, 5%);
+    color: #141414;
+
+}
+
+.service__price,
+.service__text {
+    @include text-styles ($mainFont, 18px, 400, 29.7px, 2%);
+    color: #555555;
+}
+
+
+
+.service-container {
+    display: flex;
+}
+
+hr {
+    color: #9BB7BF;
+    margin-top: 22px;
+    margin-bottom: 18px;
+}
+
+
+.service__button {
+    @include btn(#FFFFFF, 23px 34px);
+    color: $btnTextDark;
+    text-transform: uppercase;
+    letter-spacing: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 249px;
+    border: 2px solid;
+    border-color: #5C8692;
+    margin-top: 35px;
+
+    @media (max-width: 480px) {
+        margin-bottom: 20px;
+    }
+
+}
+
+//Тут заканчиваются стили для контейнера с услугами и ценами (внесла Даша)
+
+
+
+//Тут начинаются стили для контейнера с отзывами клиентов (внесла Катя)
+
+//Здесь стили для секции opinion
+.opinion {
+    background-color: #EDF5F7;
+
+    .opinion__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 147px;
+        padding-bottom: 147px;
+
+        @media (max-width: 480px) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            margin-top: 110px;
+            margin-bottom: 110px;
+        }
+    }
+}
+
+.opinion__title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    .title__small-up_uppercase {
+        @extend %title_sm-top;
+        text-transform: uppercase;
+    }
+
+    .title__h2 {
+        @include title_h2(552px);
+
+        @media (max-width: 480px) {
+            text-align: center;
+            min-width: 356px;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            text-align: center;
+            min-width: 356px;
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            text-align: center;
+            max-width: none;
+        }
+    }
+}
+
+.opinion__card-list {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        flex-direction: column;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+    }
+
+    .opinion__card {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            flex-direction: column;
+        }
+
+        @media (min-width: 1450px) and (max-width: 1920px) {
+            min-width: 582px
+        }
+    }
+}
+
+.opinion__light-box {
+    background: rgba(255, 255, 255, 1);
+    padding: 44px 44px 44px 49px;
+    max-height: 224px;
+    max-width: 578px;
+
+    @media (max-width: 480px) {
+        max-height: unset;
+        padding: 35px 25px 35px 25px;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        padding: 35px 25px 35px 25px;
+        max-height: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        max-width: 647.5px;
+        max-height: none;
+        display: flex;
+        align-items: center;
+    }
+
+    @media (min-width: 992px) and (max-width: 1449px) {
+        max-height: none;
+    }
+
+    .opinion__content {
+        max-width: 528px;
+        font-family: 'Manrope', sans-serif;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 180%;
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            max-width: none;
+        }
+    }
+}
+
+.opinion__dark-box {
+    background-color: rgba(30, 44, 48, 1);
+    max-width: 578px;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        max-width: none;
+    }
+
+    .dark-box__content {
+        max-width: 564px;
+        max-height: 57px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding-left: 51px;
+        padding-right: 51px;
+
+        @media (max-width: 480px) {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            max-height: max-content;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            max-height: max-content;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            padding-left: 35px;
+            padding-right: 35px;
+            max-height: none;
+            align-items: stretch;
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            max-width: none;
+        }
+
+        @media (min-width: 992px) and (max-width: 1449px) {
+            max-height: none;
+            gap: 24px;
+        }
+    }
+}
+
+.opinion__customer-info {
+    display: flex;
+    max-width: 232px;
+    gap: 38px;
+
+    @media (max-width: 480px) {
+        flex-direction: row;
+        align-items: none;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: none;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        flex-direction: row;
+        align-items: none;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        gap: 44px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1449px) {
+        max-width: none;
+        gap: 25px;
+    }
+}
+
+.customer-info__photo {
+    max-height: 100%;
+
+    @media (max-width: 480px) {
+        height: auto;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        height: auto;
+    }
+
+    .customer-pic {
+        height: 100%;
+
+        @media (max-width: 480px) {
+            height: auto;
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            height: auto;
+        }
+    }
+}
+
+.customer-info__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    min-width: 138px;
+    justify-content: space-evenly;
+
+    @media (max-width: 480px) {
+        align-items: flex-end;
+        text-align: end;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        min-width: auto;
+    }
+
+    .customer-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%;
+        /* 32px */
+        letter-spacing: -0.2px;
+    }
+
+    .customer-city {
+        font-family: 'Manrope', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 160%;
+        /* 22.4px */
+        letter-spacing: 0.42px;
+    }
+}
+
+.estimate__pic {
+    height: 40px;
+
+    @media (min-width: 992px) and (max-width: 1449px) {
+        height: 21px;
+    }
+
+    @media (max-width: 480px) {
+        height: 21px;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        height: auto;
+    }
+}
+
+.customer-quote {
+    @media (min-width: 992px) and (max-width: 1449px) {
+        display: flex;
+        align-self: flex-start;
+    }
+
+    @media (max-width: 480px) {
+        display: none;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        display: none;
+    }
+}
+
+//Тут заканчиваются стили для контейнера с отзывами клиентов (внесла Катя)
+
+
+//начало шестого блока Our Awesome Benefits (внесет Саша) 
+
+
+
+
+
+
+
+//конец шестого блока Our Awesome Benefits (внесет Саша)
+
+//Тут начинаются стили для контейнера со скидкой и формой (внесла Даша)
+
+.flat-discount {
+    background-color: #EDF5F7;
+    max-width: 1920px;
+    max-height: 930px;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        max-height: 2000px;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        max-height: 2000px;
+    }
+
+    @media (max-width: 480px) {
+        max-height: 2000px;
+    }
+}
+
+.flat-discount__container {
+    display: flex;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+    }
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+
+.discount__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.discount__subtitle {
+    @extend %title_sm-top;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 218px;
+}
+
+.discount__title {
+    @extend %title_h2;
+    text-align: center;
+    padding-top: 9px;
+}
+
+.discount__text {
+    @extend %title__sm-down;
+    text-align: center;
+    padding-top: 14px;
+}
+
+.discount__main {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #95BFCB;
+    margin-top: 37px;
+}
+
+.offer {
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.offer__contacts {
+    @include text-styles ($mainFont, 15px, 500, 22.5px, 0%);
+    color: #141414;
+}
+
+.offer__data {
+    @include text-styles ($mainFont, 14px, 800, 21px, 8%);
+    color: #141414;
+}
+
+.flat {
+    background-color: #1E2C30;
+}
+
+.flat__title {
+    @include text-styles ($mainFont, 15px, 800, 26.25px, 10%);
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.flat__subtitle {
+    @include text-styles ($mainFont, 18px, 800, 31.5px, 2%);
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
+.appointment__container {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 15px;
+    padding: 66px 75px;
+    margin-top: 132px;
+    margin-bottom: 131px;
+    box-shadow: 0px 34px 50px 0px #442E1A12;
+
+
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        padding: 20px 25px;
+        margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px 25px;
+        margin-top: 50px;
+    }
+}
+
+input {
+    border: none;
+    border: 1px solid #5C8692;
+    height: 65px;
+    background-repeat: no-repeat;
+    background-position: 15px;
+}
+
+.appointment__name {
+    background-image: url('/img/icons/appointment-icon1.svg');
+}
+
+.appointment__mail {
+    background-image: url('/img/icons/appointment-icon2.svg');
+}
+
+.appointment__phone {
+    background-image: url('/img/icons/appointment-icon3.svg');
+}
+
+.appointment__service {
+    background-image: url('/img/icons/appointment-icon4.svg');
+}
+
+.appointment__note {
+    background-image: url('/img/icons/appointment-icon5.svg');
+    height: 136px;
+}
+
+input {
+    @include text-styles ($mainFont, 19px, 400, 30.4px, -1%);
+    color: #141414;
+    padding-left: 54px;
+}
+
+.btn_green-secondary_uppercase {
+    @include btn(#7A9CA5, 23px 109px);
+    color: $btnTextLight;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    height: 64px;
+}
+
+//Тут заканчиваются стили для контейнера со скидкой и формой (внесла Даша)

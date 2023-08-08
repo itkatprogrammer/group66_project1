@@ -1,0 +1,28 @@
+//миксин заголовка
+@mixin title_h2($title_max-width) {
+    max-width: $title_max-width;
+    @extend %title_h2;
+}
+
+//миксин кнопки
+@mixin btn ($btnColor, $padd...) {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    letter-spacing: 1.68px;
+    background-color: $btnColor;
+    padding: $padd;
+    font-family: $btnMainFont;
+    cursor: pointer;
+    border: none;
+}
+
+//миксин для текста
+@mixin text-styles ($font-family, $font-size, $font-weight, $line-height, $letter-spacing) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}

@@ -1,0 +1,58 @@
+@import '_variables';
+@import '_mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* стили для всех области, которая содержит контейнер с контентом */
+.header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    /* background-color: #1E2C30; */
+    color: #FFF;
+    text-align: center;
+
+    background-image: url('/img/bg/template_header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* стили контейнера, в котором содержатся кнопка и два блока с текстом */
+.template-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 118px;
+}
+
+
+/* стили для небольшого текста */
+.header__content-small-text {
+    @include text-styles ($mainFont, 15px, 600, 154.5%, 1.5px);
+    text-transform: uppercase;
+}
+
+/* стили для большого текста */
+.header__content-big-text {
+    @include text-styles ($secondaryFont, 55px, 700, 120%, -0.55px);
+    padding-top: 8px;
+}
+
+
+//Cтили для зеленой кнопки
+.btn_green_uppercase {
+    @include btn(#5C8692, 23px 36px 24px 36px);
+    color: $btnTextLight;
+    text-transform: uppercase;
+    margin-top: 32px;
+    font-weight: 800;
+}

@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import 'variables';
+@import 'mixins';
+
+.title { //шаблон для заголовка
+    .title__small-up_uppercase { //стиль для верхнего текста
+        @extend %title_sm-top; //
+        text-transform: uppercase;
+    }
+    .title__h2 {
+        @include title_h2 (659px); //стиль для <h2>, значение в скобках вводим каждый свои руками!
+    }
+    .title__small-down {
+        @extend %title__sm-down; //стиль для нижнего текста
+    }    
+}

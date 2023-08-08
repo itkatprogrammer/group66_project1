@@ -1,0 +1,229 @@
+@import '_variables';
+@import '_mixins';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.services {
+    max-width: 1920px;
+
+    @media (max-width: 480px) {
+        max-width: 480px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        max-width: 991px;
+    }
+}
+
+.services__subtitle {
+    @extend %title_sm-top;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 146px;
+}
+
+.services__title {
+    @extend %title_h2;
+    text-align: center;
+    padding-top: 9px;
+}
+
+.services__container1,
+.services__container2,
+.services__container3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.services__container1,
+.services__container2 {
+    background-image: url('/img/services_background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: 480px) {
+        background-image: none;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        background-image: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        background-image: none;
+    }
+}
+
+.services__container1 {
+    padding-top: 50px;
+}
+
+.services__container3 {
+    background-image: url('/img/services_background2.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin-bottom: 131px;
+
+    @media (max-width: 480px) {
+        background-image: none;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        background-image: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        background-image: none;
+    }
+}
+
+
+.services__img {
+    @media (max-width: 480px) {
+        max-width: 300px;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        max-width: 380px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        max-width: 380px;
+    }
+}
+
+
+.service__name {
+    @include text-styles ($secondaryFont, 22px, 400, 28.6px, 5%);
+    color: #141414;
+
+}
+
+.service__price,
+.service__text {
+    @include text-styles ($mainFont, 18px, 400, 29.7px, 2%);
+    color: #555555;
+}
+
+
+
+.service-container {
+    display: flex;
+}
+
+hr {
+    color: #9BB7BF;
+    margin-top: 22px;
+    margin-bottom: 18px;
+}
+
+
+.service__button {
+    @include btn(#FFFFFF, 23px 34px);
+    color: $btnTextDark;
+    text-transform: uppercase;
+    letter-spacing: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 249px;
+    border: 2px solid;
+    border-color: #5C8692;
+    margin-top: 35px;
+
+    @media (max-width: 480px) {
+        margin-bottom: 20px;
+    }
+
+}
+
+.discount {
+    max-width: 1920px;
+    max-height: 670px;
+    background-color: #EBF3F5;
+
+    @media (max-width: 480px) {
+        max-height: 1000px;
+    }
+}
+
+.discount__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.discount__subtitle {
+    @extend %title_sm-top;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 131px;
+}
+
+.discount__title {
+    @extend %title_h2;
+    text-align: center;
+    padding-top: 9px;
+    max-width: 626px;
+}
+
+.discount__text {
+    @extend %title__sm-down;
+    text-align: center;
+    padding-top: 14px;
+    max-width: 644px;
+}
+
+.discount__main {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #95BFCB;
+    margin-top: 37px;
+    margin-bottom: 131px;
+}
+
+.offer {
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.offer__contacts {
+    @include text-styles ($mainFont, 15px, 500, 22.5px, 0%);
+    color: #141414;
+}
+
+.offer__data {
+    @include text-styles ($mainFont, 14px, 800, 21px, 8%);
+    color: #141414;
+}
+
+.flat {
+    background-color: #1E2C30;
+}
+
+.flat__title {
+    @include text-styles ($mainFont, 15px, 800, 26.25px, 10%);
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.flat__subtitle {
+    @include text-styles ($mainFont, 18px, 800, 31.5px, 2%);
+    text-align: center;
+    color: #FFFFFF;
+}

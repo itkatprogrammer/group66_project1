@@ -1,0 +1,187 @@
+@import '_variables';
+@import '_mixins';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    max-height: 635px;
+    background-color: #1E2C30;
+    color: #FFFFFF;
+    padding-top: 66px;
+
+    @media (max-width: 480px) {
+        padding-top: 11px;
+        max-height: 2500px;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        padding-top: 16px;
+        max-height: 2500px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        padding-top: 16px;
+        max-height: 2500px;
+    }
+}
+
+
+.footer__container {
+    max-width: 1200px;
+}
+
+.container__logo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 52px;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+}
+
+
+.footer__logo {
+    @include text-styles ($secondaryFont, 40px, 700, 50px, 2%);
+
+    @media (max-width: 480px) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.footer__icons {
+    @media (max-width: 480px) {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+hr {
+    max-width: 1200px;
+    border-width: 1px;
+}
+
+.container__menu {
+    display: flex;
+    gap: 129px;
+    padding-top: 52px;
+    max-width: 1200px;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 50px;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 50px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+        gap: 50px;
+    }
+    @media (min-width: 992px) and (max-width: 1449px) {
+        gap: 95px;
+        margin-bottom: 60px;
+    }
+}
+
+.explore,
+.utility {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 480px) {
+        display: none;
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        display: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        display: none;
+    }
+}
+
+.explore__title,
+.utility__title,
+.shedule__title,
+.contacts__title {
+    @include text-styles ($secondaryFont, 22px, 700, 30.8px, 0%);
+}
+
+.footer a {
+    @include text-styles ($mainFont, 17px, 500, 34px, -1%);
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.contacts__subtitle {
+    @include text-styles ($mainFont, 17px, 700, 25.5px, -1%);
+}
+
+.contacts__data {
+    @include text-styles ($mainFont, 17px, 500, 25.5px, -1%);
+}
+
+.shedule {
+    @include text-styles ($mainFont, 17px, 500, 34px, -1%);
+}
+
+.contacts__container {
+    display: flex;
+    gap: 29px;
+}
+
+.copyright {
+    max-height: 75px;
+    text-align: center;
+    background-color: #111E22;
+    @include text-styles ($mainFont, 15px, 400, 30px, -1%);
+    color: #FFFFFF;
+}

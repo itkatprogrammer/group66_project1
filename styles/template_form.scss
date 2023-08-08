@@ -1,0 +1,100 @@
+@import '_variables';
+@import '_mixins';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EBF3F5;
+    max-width: 1920px;
+    max-height: 1183px;
+    padding: 120px 455px;
+}
+
+.appointment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1010px;
+    max-height: 943px;
+}
+
+.appointment__subtitle {
+    @include text-styles ($mainFont, 15px, 600, 23.17px, 10%);
+    color: #7A9CA5;
+    text-align: center;
+}
+
+.appointment__title {
+    @extend %title_h2;
+    text-align: center;
+}
+
+.appointment__text {
+    @extend %title__sm-down;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.appointment__container {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 65px;
+    padding: 98px 100px;
+    box-shadow: 0px 34px 50px 0px #442E1A12;
+}
+
+input {
+    border: none;
+    border: 1px solid #5C8692;
+    width: 810px;
+    height: 65px;
+    background-repeat: no-repeat;
+    background-position: 15px;
+}
+
+.appointment__name {
+    background-image: url('/img/icons/appointment-icon1.svg');
+}
+
+.appointment__mail {
+    background-image: url('/img/icons/appointment-icon2.svg');
+}
+
+.appointment__phone {
+    background-image: url('/img/icons/appointment-icon3.svg');
+}
+
+.appointment__service {
+    background-image: url('/img/icons/appointment-icon4.svg');
+}
+
+.appointment__note {
+    background-image: url('/img/icons/appointment-icon5.svg');
+    height: 123px;
+}
+
+input {
+    @include text-styles ($mainFont, 19px, 400, 30.4px, -1%);
+    color: #141414;
+    padding-left: 54px;
+}
+
+.btn_green-secondary_uppercase {
+    @include btn(#7A9CA5, 23px 307px);
+    color: $btnTextLight;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 65px;
+    width: 810px;
+}
