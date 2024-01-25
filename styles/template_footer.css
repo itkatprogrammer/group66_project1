@@ -5,8 +5,9 @@
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
   max-height: 635px;
-  max-width: 1920px;
   background-color: #1E2C30;
   color: #FFFFFF;
   padding-top: 66px;
@@ -135,6 +136,12 @@ hr {
   .container__menu {
     flex-direction: column;
     gap: 50px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1449px) {
+  .container__menu {
+    gap: 95px;
+    margin-bottom: 60px;
   }
 }
 
