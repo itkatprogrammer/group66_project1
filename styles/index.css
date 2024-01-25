@@ -54,7 +54,7 @@ body {
   margin: 0 auto;
   padding-left: 360px;
   padding-right: 360px;
-  background-image: url("/img/bg/home_first-block bg.png");
+  background-image: url("../img/bg/home_first-block bg.png");
   background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: right;
