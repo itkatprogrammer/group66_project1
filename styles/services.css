@@ -79,6 +79,13 @@
     grid-template-columns: 1fr;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .services__container1,
+  .services__container2,
+  .services__container3 {
+    grid-template-columns: 1fr;
+  }
+}
 
 .services__container1,
 .services__container2 {
@@ -131,6 +138,9 @@
   }
 }
 
+.services__img {
+  max-width: 600px;
+}
 @media (max-width: 480px) {
   .services__img {
     max-width: 300px;
@@ -143,7 +153,9 @@
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .services__img {
-    max-width: 380px;
+    display: flex;
+    align-self: center;
+    max-width: 308px;
   }
 }
 

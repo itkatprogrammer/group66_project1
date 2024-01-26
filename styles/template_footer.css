@@ -11,6 +11,8 @@
   background-color: #1E2C30;
   color: #FFFFFF;
   padding-top: 66px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 @media (max-width: 480px) {
   .footer {
@@ -229,4 +231,6 @@ hr {
   line-height: 30px;
   letter-spacing: -1%;
   color: #FFFFFF;
+  max-width: 1920px;
+  margin: 0 auto;
 }/*# sourceMappingURL=template_footer.css.map */

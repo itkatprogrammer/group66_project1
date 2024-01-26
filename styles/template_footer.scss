@@ -14,6 +14,8 @@
     background-color: #1E2C30;
     color: #FFFFFF;
     padding-top: 66px;
+    max-width: 1920px;
+    margin: 0 auto;
 
     @media (max-width: 480px) {
         padding-top: 11px;
@@ -184,4 +186,6 @@ hr {
     background-color: #111E22;
     @include text-styles ($mainFont, 15px, 400, 30px, -1%);
     color: #FFFFFF;
+    max-width: 1920px;
+    margin: 0 auto;
 }
