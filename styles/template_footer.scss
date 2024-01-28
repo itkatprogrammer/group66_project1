@@ -109,9 +109,11 @@ hr {
 
 .container__menu {
     display: flex;
-    gap: 129px;
+    gap: 10px;
     padding-top: 52px;
     max-width: 1200px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     @media (max-width: 480px) {
         flex-direction: column;
@@ -130,7 +132,7 @@ hr {
         gap: 50px;
     }
     @media (min-width: 992px) and (max-width: 1449px) {
-        gap: 95px;
+        gap: 5px;
         padding-bottom: 60px;
     }
 }
@@ -176,11 +178,16 @@ hr {
 
 .shedule {
     @include text-styles ($mainFont, 17px, 500, 34px, -1%);
+    min-width: 171px;
 }
 
 .contacts__container {
     display: flex;
-    gap: 29px;
+    gap: 5px;
+    min-width: 437px;
+    @media (max-width: 500px) {
+        min-width: auto;
+    }
 }
 
 .copyright {

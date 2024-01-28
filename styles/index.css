@@ -38,7 +38,6 @@
 body {
   margin: 0 auto;
   width: 100%;
-  background-color: pink;
 }
 
 /* начало стилей первого блока с карточками (Оксана) */
@@ -441,6 +440,12 @@ body {
   padding-top: 35px;
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+  .left-container__cards {
+    justify-content: center;
+    gap: 35px;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1254px) {
   .left-container__cards {
     justify-content: center;
     gap: 35px;
@@ -1425,7 +1430,7 @@ hr {
     margin-top: 50px;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .appointment__container {
     margin-top: 20px;
   }
